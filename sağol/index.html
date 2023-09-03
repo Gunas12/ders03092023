@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    id:<input id="id" type="text">
+    name:<input id="name" type="text">
+    surname:<input id="surname" type="text">
+    <button id="btn"> Add list item</button>
+    <br>
+    <table>
+        <tr>
+            <th><b> Id</b></th>
+            <th><b> Name</b></th>
+            <th><b> Surname</b></th>
+        </tr>
+    </table>
+    <table>
+        <tr id="siyahi">
+
+        </tr>
+    </table>
+    <script>
+        let input = document.getElementById("id");
+        let name = document.getElementById("name");
+        let surname = document.getElementById("surname");
+        let btn = document.getElementById("btn");
+        let siyahi = document.getElementById("siyahi")
+
+
+        btn.addEventListener("click", function () {
+            let tr = document.createElement("tr");
+            tr.innerText = input.value + "  " + name.value + "     " + surname.value
+
+
+
+
+            siyahi.appendChild(tr);
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
